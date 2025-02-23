@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://kit.fontawesome.com/640c6495ab.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Student</p>
+                <h1>Hi, I'm <span>Mohd<br>Arshad</span> From India</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-------------about----------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.webp" alt="Profile Picture">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hi, I'm Arshad, a passionate full-stack developer with a keen interest in building innovative and efficient web applications. I specialize in developing scalable, user-friendly solutions that enhance user experience and functionality. With a strong foundation in both frontend and backend development, I enjoy turning ideas into interactive and high-performing applications.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
+                        <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                    </div>
+
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Full-Stack Web Development</li>                            
+                            <li><span>Programming Languages</span><br>C++, JavaScript</li>
+                            <li><span>Frameworks & Libraries</span><br>React.js, Node.js</li>
+                            <li><span>Tools & Platforms</span><br>Git, GitHub, Android Studio</li>
+                            <li><span>Languages</span><br>English, Hindi (Native), Urdu</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>Degree</span><br>Bachelor's of Engineering in Computer Science</li>                            
+                            <li><span>Tools & Platforms</span><br>Git, GitHub, Android Studio</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="experience">
+                        <ul>
+                            <li><span>LeetCode</span><br>Solved 100+ problems to strengthen DSA skills.</li>
+                            <li><span>HackerRank</span><br>Earned Gold Badges in C++ and Problem Solving.</li>                            
+                            <li><span>Coding Ninjas</span><br>Solved 70+ problems on Coding Ninjas to strengthen DSA skills.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- --------------services-------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list"> <!-- Changed class to match CSS -->
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Build modern, responsive websites & web applications.
+                    Deliver high-performance and SEO-friendly solutions.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-briefcase"></i>
+                <h2>Portfolio Website Creation</h2>
+                <p>Develop personal or business portfolio websites.
+                    Ensure a unique, visually appealing, and professional design.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-bug-slash"></i>
+                <h2>Bug Fixing & Debugging</h2>
+                <p>Optimize and debug JavaScript, C++ code, and more.
+                    Improve code efficiency and eliminate performance bottlenecks.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ------------portfolio-------------- -->
+<div class="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+    <script>
+        function opentab(event, tabname) {
+            var tablinks = document.getElementsByClassName("tab-links");
+            var tabcontents = document.getElementsByClassName("tab-content");
+            for (let tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (let tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            document.getElementById(tabname).classList.add("active-tab");
+            event.currentTarget.classList.add("active-link");
+}
+    </script>
+
+</body>
+</html>
