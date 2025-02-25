@@ -44,11 +44,12 @@
                         <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
                         <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
                         <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab(event, 'certifications')">Certifications</p>
+
                     </div>
 
                     <div class="tab-content active-tab" id="skills">
                         <ul>
-                            <li><span>Web Development</span><br>Full-Stack Web Development</li>                            
                             <li><span>Programming Languages</span><br>C++, JavaScript</li>
                             <li><span>Frameworks & Libraries</span><br>React.js, Node.js</li>
                             <li><span>Tools & Platforms</span><br>Git, GitHub, Android Studio</li>
@@ -58,7 +59,9 @@
 
                     <div class="tab-content" id="education">
                         <ul>
-                            <li><span>Degree</span><br>Bachelor's of Engineering in Computer Science</li>                            
+                            <li><span>Degree</span><br>Bachelor's of Engineering in Computer Science<br>GPA: 7.5 | Class of 2026</li>  
+                            <li><span>Intermediate</span><br>Science (PCM) | CBSE Board<br>Percentage: 84.6 | Class of 2022</li>  
+                            <li><span>Matriculation</span><br>CBSE Board<br>Percentage: 78.8 | Class of 2020</li>  
                         </ul>
                     </div>
 
@@ -67,6 +70,20 @@
                             <li><span>LeetCode</span><br>Solved 100+ problems to strengthen DSA skills.</li>
                             <li><span>HackerRank</span><br>Earned Gold Badges in C++ and Problem Solving.</li>                            
                             <li><span>Coding Ninjas</span><br>Solved 70+ problems on Coding Ninjas to strengthen DSA skills.</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="certifications">
+                        <ul>
+                            <li><span>Multi-Core Computer Architecture</span><br>Issued by NPTEL | Issued: Jul 2023</li>
+                            <li><span>Cloud Computing</span><br>Issued by NPTEL | Issued: Jan 2024</li> 
+                            <li><span>Internet of Things: Design Concepts and Use Cases</span><br>Issued by NITTR | Issued: Jul 2024</li>
+                            <li><span>Blockchain Technology using Ethereum & Polygon</span><br>
+                                Issued by Chandigarh University & Metacrafters<br>
+                                Duration: June 2024 - August 2024<br>
+                                Completed Modules: JS PROOF (Beginner), ETH PROOF (Beginner EVM)
+                             </li>                             
+                            <li><span>Foundation of Cloud IoT Edge ML</span><br>Issued by NPTEL | Issued: Feb 2025</li>
                         </ul>
                     </div>
 
@@ -169,13 +186,15 @@
  </div>
 
 <script>
-    function opentab(event, tabname) {
-        document.querySelectorAll(".tab-links").forEach(link => link.classList.remove("active-link"));
-        document.querySelectorAll(".tab-content").forEach(content => content.classList.remove("active-tab"));
-        document.getElementById(tabname).classList.add("active-tab");
-        event.currentTarget.classList.add("active-link");
-    }
-    
+
+    function opentab(event, tabName) {
+    let tabContents = document.querySelectorAll(".tab-content");
+    let tabLinks = document.querySelectorAll(".tab-links");
+    tabContents.forEach((content) => content.classList.remove("active-tab"));
+    tabLinks.forEach((link) => link.classList.remove("active-link"));
+    document.getElementById(tabName).classList.add("active-tab");
+    event.currentTarget.classList.add("active-link");
+}
     var sidemenu = document.getElementById("sidemenu");
 
     function openmenu() {
