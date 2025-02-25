@@ -306,12 +306,12 @@ nav ul li a:hover::after{
     width: 100%;
 }
 form input, form textarea{
-    width: 100%;
+    width: 90%;
     border: 0;
     outline: none;
     background: #262626;
     padding: 12px;
-    margin: 10px 0;
+    margin: 12px 0;
     color: white;
     font-size: 18px;
     border-radius: 6px;
