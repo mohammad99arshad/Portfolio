@@ -13,14 +13,14 @@
             <nav>
                 <img src="images/logo.png" alt="logo" class="logo">
                 <ul id="sidemenu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><i class="fa-solid fa-xmark" onclick="closemenu()"></i></li>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
                 <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Student</p>
@@ -29,7 +29,7 @@
         </div>
     </div>
 
-    <!------------- About Section ----------->
+    <!------------- About  ----------->
     <div id="about">
         <div class="container">
             <div class="row">
@@ -103,7 +103,7 @@
 </div>
 
 <!-- ------------ Portfolio -------------- -->
-<div class="portfolio">
+<div id="portfolio" class="portfolio">
     <div class="container">
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
@@ -122,7 +122,7 @@
 </div>
 
 <!-- ------------ Contact ----------- -->
- <div class="contact">
+<div id="contact" class="contact">
     <div class="container">
         <div class="row">
             <div class="contact-left">
@@ -140,7 +140,7 @@
             <div class="contact-right">
                 <form>
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" id="message" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
@@ -159,7 +159,7 @@
         document.getElementById(tabname).classList.add("active-tab");
         event.currentTarget.classList.add("active-link");
     }
-
+    
     var sidemenu = document.getElementById("sidemenu");
 
     function openmenu() {
